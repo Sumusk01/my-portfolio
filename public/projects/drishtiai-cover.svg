@@ -1,0 +1,12 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="40" fill="#0d1117" />
+  <rect x="60" y="60" width="1080" height="120" rx="24" fill="#131921" />
+  <rect x="60" y="220" width="1080" height="360" rx="24" fill="#0b1220" />
+  <text x="80" y="130" fill="#8b95a1" font-family="JetBrains Mono, monospace" font-size="32">DrishtiAI — Image Dehazing System</text>
+  <text x="80" y="280" fill="#d1d5db" font-family="JetBrains Mono, monospace" font-size="36">Deep Learning · Computer Vision · YOLOv8</text>
+  <circle cx="250" cy="450" r="110" fill="#2f2f6b" />
+  <circle cx="288" cy="428" r="90" fill="#3f3fb3" opacity="0.65" />
+  <rect x="460" y="360" width="520" height="20" rx="10" fill="#161d2b" />
+  <rect x="460" y="410" width="520" height="20" rx="10" fill="#161d2b" />
+  <rect x="460" y="460" width="300" height="20" rx="10" fill="#161d2b" />
+</svg>
