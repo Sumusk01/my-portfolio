@@ -28,14 +28,24 @@ export function CaseStudyLayout({ project, children }: CaseStudyLayoutProps) {
               </span>
             ))}
           </div>
-          <Link
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-slate-100 transition hover:border-white/20"
-          >
-            <Github size={16} /> View repository
-          </Link>
+                    {project.repoReady ? (
+            <Link
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-slate-100 transition hover:border-white/20"
+            >
+              <Github size={16} /> View repository
+            </Link>
+          ) : (
+            <span
+              aria-disabled="true"
+              title="Repository not public yet"
+              className="inline-flex cursor-not-allowed items-center gap-2 rounded-full border border-white/5 bg-white/5 px-4 py-3 text-sm font-semibold text-slate-500"
+            >
+              <Github size={16} /> View repository
+            </span>
+          )}
         </div>
         {children}
       </div>

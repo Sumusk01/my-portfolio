@@ -35,7 +35,7 @@ If you use GitHub integration, push to `main` and Vercel can auto-deploy on ever
 
 ## What still needs personal input
 
-- Replace `your-username` in `data/links.ts`, `data/projects.ts`, and `components/OpenSourcePanel.tsx` with your GitHub username.
+- Replace `https://github.com/Sumusk01` in `data/links.ts`, `data/projects.ts`, and `components/OpenSourcePanel.tsx` with your GitHub username.
 - Add real project repository URLs and screenshot assets.
 - Replace the placeholder `public/resume.pdf` with your actual resume.
 - Add a profile photo if desired.

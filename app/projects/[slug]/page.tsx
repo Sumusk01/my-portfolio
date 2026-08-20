@@ -26,7 +26,7 @@ function DiagramPlaceholder() {
   return (
     <div className="rounded-3xl border border-dashed border-white/20 bg-[#02040a]/90 p-10 text-center text-slate-400">
       <p className="font-mono text-sm uppercase tracking-[0.35em] text-slate-500">Architecture / data flow</p>
-      <p className="mt-4 text-sm leading-7">Placeholder for a diagram or Mermaid flowchart. Add a visual architecture asset here later.</p>
+      <p className="mt-4 text-sm leading-7">Details will be added soon in the Upcoming versions.</p>
     </div>
   );
 }
@@ -66,7 +66,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               <Image src={project.image} alt={`${project.title} project screenshot`} fill sizes="(max-width: 768px) 100vw, 768px" className="object-cover" />
             </div>
             <div className="rounded-3xl border border-dashed border-white/10 bg-[#02040a]/80 p-6 text-slate-300">
-              <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Gallery placeholder</p>
+              <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Gallery will be added soon</p>
               <p className="mt-4 text-sm leading-7">Add additional screenshots or mockups here once available.</p>
             </div>
           </div>

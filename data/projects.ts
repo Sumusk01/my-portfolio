@@ -5,6 +5,7 @@ export type Project = {
   outcome: string;
   stack: string[];
   github: string;
+  repoReady: boolean;
   liveDemo?: string;
   image: string;
   featured: boolean;
@@ -19,7 +20,8 @@ export const projects: Project[] = [
     outcome:
       'Gives administrators a reliable, production-grade system to add, edit, delete, and view student records with built-in validation and health monitoring.',
     stack: ['Java', 'Spring Boot', 'PostgreSQL', 'React.js', 'REST APIs'],
-    github: 'https://github.com/your-username/student-info-system',
+    github: 'https://github.com/Sumusk01/student-info-system',
+    repoReady: false,
     liveDemo: '',
     image: '/projects/student-info-system-cover.svg',
     featured: true,
@@ -32,7 +34,8 @@ export const projects: Project[] = [
     outcome:
       'Comparative study across classical and deep learning dehazing approaches (DCP, AOD-Net, FFA-Net, DehazeFormer) on RESIDE SOTS and Foggy Driving datasets, with a YOLOv8 object-detection evaluation showing dehazing improves visual clarity but can reduce downstream detection performance in real foggy scenes.',
     stack: ['Python', 'Deep Learning', 'Computer Vision', 'YOLOv8'],
-    github: 'https://github.com/your-username/drishti-ai',
+    github: 'https://github.com/Sumusk01/drishti-ai',
+    repoReady: false,
     liveDemo: '',
     image: '/projects/drishtiai-cover.svg',
     featured: true,

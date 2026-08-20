@@ -19,17 +19,17 @@ export function About() {
             Project-driven software engineering with an honest fresher trajectory.
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-8 text-slate-300">
-            Software Engineer with 1+ years of hands-on experience designing, developing, and deploying scalable web applications across the complete SDLC. Well-versed in Agile methodologies, with strong proficiency across frontend and backend technologies including Java, Spring Boot, React.js, and Node.js. Actively leverages AI-powered development workflows — context engineering, effective prompt design, and task orchestration — to accelerate development and improve code quality.
+            Every project follows the same rhythm: understand the problem, sketch the data flow, then build in small, testable increments — Agile habits carried over from coursework into real code. That discipline shows up in the details: global exception handling and health-check endpoints built into a CRUD system, not bolted on as an afterthought. Equally comfortable on the backend with Java and Spring Boot as on the frontend with React and Next.js, with PostgreSQL holding the data layer together. AI tools are part of the process for exploring approaches quickly, but every output gets checked against the fundamentals — data structures, system design, how the pieces actually fit — before it makes it into a project.
           </p>
         </div>
         <div className="grid gap-8 lg:grid-cols-[1.5fr_1fr]">
           <div className="grid gap-4 rounded-3xl border border-white/10 bg-surface2/95 p-6 shadow-glow">
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
               {[
-                { label: '2026', value: 'Graduating (B.Tech CSE)' },
-                { label: '2+', value: 'Major projects shipped' },
-                { label: '6', value: 'Certifications completed' },
-                { label: '1+ yr', value: 'Hands-on build experience' },
+                { label: '2026', value: 'B.Tech CSE Graduate' },
+                { label: '1+', value: 'Major projects shipped' },
+                { label: '6+', value: 'Certifications completed' },
+                { label: 'AI-Native', value: 'Ships with AI tools in the loop' },
               ].map((item) => (
                 <div key={item.label} className="rounded-3xl bg-[#111827]/85 p-4">
                   <p className="text-sm font-mono uppercase tracking-[0.25em] text-slate-500">{item.label}</p>

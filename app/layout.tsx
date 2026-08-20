@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://sumit-space-xi.vercel.app'),
   title: 'Sumit Kumar — Software Engineer & Full-Stack Developer',
   description:
     'Portfolio of Sumit Kumar, a full-stack software engineer specializing in Java, Spring Boot, React, and Next.js. B.Tech CSE graduate building AI-augmented, production-quality web applications.',

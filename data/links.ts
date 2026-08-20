@@ -1,6 +1,6 @@
 export const socialLinks = {
-  github: 'https://github.com/your-username',
-  linkedin: 'https://linkedin.com/in/sumit-kumar-353332256',
+  github: 'https://github.com/Sumusk01',
+  linkedin: 'https://linkedin.com/in/sumit-kumar-work',
   email: 'mailto:sumitkumar.work@outlook.com',
 };
 

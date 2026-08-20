@@ -23,7 +23,7 @@ export function Hero() {
           </p>
           <div className="space-y-6">
             <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              I build full-stack applications with a deliberate AI-augmented development workflow.
+              I build full-stack web applications with a deliberate AI-augmented development workflow.
             </h1>
             <p className="max-w-xl text-base leading-8 text-slate-300"> 
               {hero.intro}

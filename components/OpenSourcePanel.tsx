@@ -1,7 +1,7 @@
 import { socialLinks } from '@/data/links';
 
 export function OpenSourcePanel() {
-  const githubUsername = 'your-username';
+  const githubUsername = 'Sumusk01'; // Replace with your GitHub username
 
   return (
     <section id="open-source" className="px-5 py-20 sm:px-6 lg:py-24">

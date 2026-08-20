@@ -10,7 +10,7 @@ export function TerminalWindow() {
       </div>
       <div className="space-y-3 font-mono leading-6">
         <div className="text-slate-400">sumit@dev:~$ whoami</div>
-        <div className="text-slate-100">&gt; full-stack engineer, fresher, ships fast</div>
+        <div className="text-slate-100">&gt; software engineer, fresher, ships fast</div>
         <div className="text-slate-400">sumit@dev:~$ cat skills.json | grep -c true</div>
         <div className="text-slate-100">&gt; 15+</div>
       </div>
