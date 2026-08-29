@@ -1,12 +1,45 @@
-<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="720" rx="40" fill="#0d1117" />
-  <rect x="60" y="60" width="1080" height="120" rx="24" fill="#131921" />
-  <rect x="60" y="220" width="1080" height="360" rx="24" fill="#0b1220" />
-  <text x="80" y="130" fill="#8b95a1" font-family="JetBrains Mono, monospace" font-size="32">DrishtiAI — Image Dehazing System</text>
-  <text x="80" y="280" fill="#d1d5db" font-family="JetBrains Mono, monospace" font-size="36">Deep Learning · Computer Vision · YOLOv8</text>
-  <circle cx="250" cy="450" r="110" fill="#2f2f6b" />
-  <circle cx="288" cy="428" r="90" fill="#3f3fb3" opacity="0.65" />
-  <rect x="460" y="360" width="520" height="20" rx="10" fill="#161d2b" />
-  <rect x="460" y="410" width="520" height="20" rx="10" fill="#161d2b" />
-  <rect x="460" y="460" width="300" height="20" rx="10" fill="#161d2b" />
+<svg viewBox="0 0 1200 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#050914"/>
+    </linearGradient>
+    <radialGradient id="hazy" cx="40%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </radialGradient>
+    <radialGradient id="clear" cx="40%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="480" fill="url(#bg2)"/>
+
+  <!-- browser chrome dots -->
+  <circle cx="60" cy="61" r="9" fill="#ff5f56"/>
+  <circle cx="90" cy="61" r="9" fill="#ffbd2e"/>
+  <circle cx="120" cy="61" r="9" fill="#27c93f"/>
+
+  <!-- title block -->
+  <text x="60" y="150" font-family="JetBrains Mono, Fira Code, monospace" font-size="52" font-weight="700" fill="#ffffff">DrishtiAI</text>
+  <text x="60" y="192" font-family="Inter, sans-serif" font-size="22" fill="#94a3b8">Image Dehazing System</text>
+  <text x="60" y="228" font-family="JetBrains Mono, Fira Code, monospace" font-size="17" fill="#cbd5e1">Deep Learning · Computer Vision · YOLOv8</text>
+
+  <!-- pipeline skeleton -->
+  <rect x="60" y="270" width="440" height="14" rx="7" fill="#ffffff" opacity="0.08"/>
+  <rect x="60" y="304" width="340" height="14" rx="7" fill="#ffffff" opacity="0.08"/>
+  <rect x="60" y="338" width="260" height="14" rx="7" fill="#ffffff" opacity="0.08"/>
+
+  <!-- before / after visual -->
+  <circle cx="860" cy="300" r="78" fill="url(#hazy)" opacity="0.55"/>
+  <circle cx="960" cy="300" r="78" fill="url(#clear)" opacity="0.85"/>
+  <text x="900" y="308" font-family="Inter, sans-serif" font-size="26" fill="#ffffff" text-anchor="middle">→</text>
+
+  <text x="860" y="404" font-family="JetBrains Mono, Fira Code, monospace" font-size="14" fill="#94a3b8" text-anchor="middle">HAZY INPUT</text>
+  <text x="960" y="404" font-family="JetBrains Mono, Fira Code, monospace" font-size="14" fill="#c4b5fd" text-anchor="middle">DEHAZED OUTPUT</text>
+
+  <!-- YOLOv8 detection box accent -->
+  <rect x="928" y="268" width="64" height="46" rx="4" fill="none" stroke="#facc15" stroke-width="2" stroke-dasharray="5 4" opacity="0.8"/>
+  <text x="960" y="260" font-family="JetBrains Mono, Fira Code, monospace" font-size="11" fill="#facc15" text-anchor="middle" letter-spacing="1">YOLOv8</text>
 </svg>

@@ -25,7 +25,7 @@ export const timeline: TimelineItem[] = [
   },
   {
     date: '2025',
-    title: 'Student Information Management System',
+    title: 'CampusConnect - Student Information Management System',
     org: 'Personal Project',
     type: 'project',
     description: 'Full-stack CRUD app with Spring Boot, PostgreSQL, and React.',

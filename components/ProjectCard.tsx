@@ -78,7 +78,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             Case study
             <ExternalLink size={14} />
           </Link>
-          {project.github ? (
+          {project.repoReady ? (
             <Link
               href={project.github}
               target="_blank"
@@ -87,7 +87,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
             >
               <Github size={14} /> Github
             </Link>
-          ) : null}
+          ) : (
+            <span
+              aria-disabled="true"
+              className="inline-flex cursor-not-allowed items-center gap-2 rounded-full border border-white/5 bg-surface px-4 py-2 text-sm text-slate-500"
+            >
+              <Github size={14} /> Github
+            </span>
+          )}
         </div>
       </div>
     </article>

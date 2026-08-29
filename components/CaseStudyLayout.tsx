@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowLeft, Github } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
 import type { Project } from '@/data/projects';
 
 interface CaseStudyLayoutProps {
@@ -28,23 +28,38 @@ export function CaseStudyLayout({ project, children }: CaseStudyLayoutProps) {
               </span>
             ))}
           </div>
-                    {project.repoReady ? (
-            <Link
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-slate-100 transition hover:border-white/20"
-            >
-              <Github size={16} /> View repository
-            </Link>
-          ) : (
-            <span
-              aria-disabled="true"
-              title="Repository not public yet"
-              className="inline-flex cursor-not-allowed items-center gap-2 rounded-full border border-white/5 bg-white/5 px-4 py-3 text-sm font-semibold text-slate-500"
-            >
-              <Github size={16} /> View repository
-            </span>
+          <div className="flex flex-wrap items-center gap-3">
+            {project.repoReady ? (
+              <Link
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-slate-100 transition hover:border-white/20"
+              >
+                <Github size={16} /> View repository
+              </Link>
+            ) : (
+              <span
+                aria-disabled="true"
+                className="inline-flex cursor-not-allowed items-center gap-2 rounded-full border border-white/5 bg-white/5 px-4 py-3 text-sm font-semibold text-slate-500"
+              >
+                <Github size={16} /> View repository
+              </span>
+            )}
+
+            {project.liveDemo && (
+              <Link
+                href={project.liveDemo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-3 text-sm font-semibold text-white shadow-glow transition hover:bg-violet-500"
+              >
+                <ExternalLink size={16} /> Live demo
+              </Link>
+            )}
+          </div>
+          {!project.repoReady && project.repoNote && (
+            <p className="text-xs text-slate-500">{project.repoNote}</p>
           )}
         </div>
         {children}

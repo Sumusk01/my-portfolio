@@ -1,5 +1,6 @@
 import { Briefcase, Cpu, Database, Layers, Sparkles } from 'lucide-react';
 import { skills } from '@/data/skills';
+import { ArchitectureDiagram } from './ArchitectureDiagram';
 
 const techIcons = [
   { label: 'Java', icon: Cpu },
@@ -22,6 +23,14 @@ export function About() {
             Every project follows the same rhythm: understand the problem, sketch the data flow, then build in small, testable increments — Agile habits carried over from coursework into real code. That discipline shows up in the details: global exception handling and health-check endpoints built into a CRUD system, not bolted on as an afterthought. Equally comfortable on the backend with Java and Spring Boot as on the frontend with React and Next.js, with PostgreSQL holding the data layer together. AI tools are part of the process for exploring approaches quickly, but every output gets checked against the fundamentals — data structures, system design, how the pieces actually fit — before it makes it into a project.
           </p>
         </div>
+
+        <div className="mb-12">
+          <ArchitectureDiagram
+            title="// how a typical build comes together"
+            stages={['React / Next.js Frontend', 'REST API — Spring Boot / Node.js', 'PostgreSQL Database']}
+          />
+        </div>
+
         <div className="grid gap-8 lg:grid-cols-[1.5fr_1fr]">
           <div className="grid gap-4 rounded-3xl border border-white/10 bg-surface2/95 p-6 shadow-glow">
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">

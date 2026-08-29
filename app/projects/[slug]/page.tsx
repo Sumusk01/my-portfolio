@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { projects } from '@/data/projects';
 import { CaseStudyLayout } from '@/components/CaseStudyLayout';
+import { ArchitectureDiagram } from '@/components/ArchitectureDiagram';
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -22,15 +23,6 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-function DiagramPlaceholder() {
-  return (
-    <div className="rounded-3xl border border-dashed border-white/20 bg-[#02040a]/90 p-10 text-center text-slate-400">
-      <p className="font-mono text-sm uppercase tracking-[0.35em] text-slate-500">Architecture / data flow</p>
-      <p className="mt-4 text-sm leading-7">Details will be added soon in the Upcoming versions.</p>
-    </div>
-  );
-}
-
 export default function ProjectPage({ params }: { params: { slug: string } }) {
   const project = projects.find((item) => item.slug === params.slug);
   if (!project) notFound();
@@ -45,6 +37,11 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       ? 'Chose a Spring Boot + PostgreSQL stack for strong data integrity and structured APIs, while keeping the frontend responsive and easy to maintain. Focused on validation, record history, and reliable CRUD flows rather than adding unnecessary bells and whistles.'
       : 'Balanced academic evaluation with practical implementation: prioritized comparative model quality and dataset results over deploying a polished demo app. The key tradeoff was showing that dehazing can improve visual clarity but may impact YOLOv8 detection accuracy in some foggy scenes.';
 
+  const diagramStages =
+    project.slug === 'student-information-management-system'
+      ? ['React Frontend', 'Spring Boot REST API (validation + exception handling)', 'PostgreSQL']
+      : ['Hazy Input Image', 'Dehazing Model (DCP / AOD-Net / FFA-Net / DehazeFormer)', 'Enhanced Output', 'YOLOv8 Object Detection', 'Evaluation'];
+
   return (
     <CaseStudyLayout project={project}>
       <section className="space-y-10">
@@ -57,7 +54,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             <h3 className="text-xl font-semibold text-white">Constraints & tradeoffs</h3>
             <p className="mt-4 text-slate-300 leading-8">{constraints}</p>
           </div>
-          <DiagramPlaceholder />
+          <ArchitectureDiagram title="// architecture / data flow" stages={diagramStages} />
         </div>
         <div className="rounded-3xl border border-white/10 bg-surface2/95 p-8 shadow-glow">
           <h3 className="text-xl font-semibold text-white">Screenshots & UI states</h3>

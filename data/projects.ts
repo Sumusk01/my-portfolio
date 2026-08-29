@@ -6,6 +6,7 @@ export type Project = {
   stack: string[];
   github: string;
   repoReady: boolean;
+  repoNote?: string;
   liveDemo?: string;
   image: string;
   featured: boolean;
@@ -14,15 +15,15 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: 'student-information-management-system',
-    title: 'Student Information Management System',
+    title: 'CampusConnect — Student Information Management System',
     description:
       'Full-stack CRUD application to streamline student record management — a Spring Boot backend paired with PostgreSQL for reliable data persistence and a responsive React frontend.',
     outcome:
       'Gives administrators a reliable, production-grade system to add, edit, delete, and view student records with built-in validation and health monitoring.',
     stack: ['Java', 'Spring Boot', 'PostgreSQL', 'React.js', 'REST APIs'],
-    github: 'https://github.com/Sumusk01/student-info-system',
-    repoReady: false,
-    liveDemo: '',
+    github: 'https://github.com/Sumusk01/CampusConnect-project',
+    repoReady: true,
+    liveDemo: 'https://campus-connect-project-eight.vercel.app/',
     image: '/projects/student-info-system-cover.svg',
     featured: true,
   },
@@ -34,9 +35,9 @@ export const projects: Project[] = [
     outcome:
       'Comparative study across classical and deep learning dehazing approaches (DCP, AOD-Net, FFA-Net, DehazeFormer) on RESIDE SOTS and Foggy Driving datasets, with a YOLOv8 object-detection evaluation showing dehazing improves visual clarity but can reduce downstream detection performance in real foggy scenes.',
     stack: ['Python', 'Deep Learning', 'Computer Vision', 'YOLOv8'],
-    github: 'https://github.com/Sumusk01/drishti-ai',
+    github: 'https://github.com/Sumusk01/',
     repoReady: false,
-    liveDemo: '',
+    repoNote: 'Academic project — kept private, no public repository planned.',
     image: '/projects/drishtiai-cover.svg',
     featured: true,
   },
